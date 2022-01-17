@@ -54,6 +54,8 @@ const (
 	CommentsSectionName = "data"
 	GlobalSectionName   = "data"
 	DefaultSectionName  = "data"
+	BackendSectionName  = "data"
+	FrontendSectionName = "data"
 )
 
 type Parser interface {

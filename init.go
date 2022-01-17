@@ -79,8 +79,14 @@ func (p *configParser) initParserMaps() {
 		GlobalSectionName: p.getGlobalParser(),
 	}
 
-	p.Parsers[Frontends] = map[string]*Parsers{}
-	p.Parsers[Backends] = map[string]*Parsers{}
+	p.Parsers[Frontends] = map[string]*Parsers{
+		FrontendSectionName: p.getFrontendParser(),
+	}
+
+	p.Parsers[Backends] = map[string]*Parsers{
+		BackendSectionName: p.getBackendParser(),
+	}
+
 	p.Parsers[Listen] = map[string]*Parsers{}
 	p.Parsers[Resolvers] = map[string]*Parsers{}
 	p.Parsers[UserList] = map[string]*Parsers{}
